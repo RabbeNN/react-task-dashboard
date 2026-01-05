@@ -1,0 +1,81 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #111;
+  --card-bg: #f4f4f4;
+  --btn-bg: #111;
+  --btn-text: #fff;
+}
+
+[data-theme="dark"] {
+  --bg-color: #0f172a;
+  --text-color: #e5e7eb;
+  --card-bg: #1e293b;
+  --btn-bg: #e5e7eb;
+  --btn-text: #0f172a;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  padding: 1rem;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  overflow-y: auto;
+}
+
+/* Smooth transitions */
+body,
+.main-content,
+nav,
+button,
+a {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  padding: 6px 12px;
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  border-radius: 4px;
+}
+
+nav {
+  padding: 1rem 2rem;
+  background-color: var(--card-bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+  margin-right: 1rem;
+}
+
+a:last-child {
+  margin-right: 0;
+}
